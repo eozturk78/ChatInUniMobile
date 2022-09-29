@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1007774413971",
+    "firebase_url": "https://chatinuni-d900d.firebaseio.com",
+    "project_id": "chatinuni-d900d",
+    "storage_bucket": "chatinuni-d900d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1007774413971:android:170cbe0dd3be727bbbc966",
+        "android_client_info": {
+          "package_name": "com.mobile.chatinunii"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1007774413971-mvvfj1det8mj3a40hotvk94te58egge0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfzMTKN8XBeVGKWNqoqcJ-I53USszILB4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1007774413971-mvvfj1det8mj3a40hotvk94te58egge0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
