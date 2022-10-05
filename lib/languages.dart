@@ -19,7 +19,7 @@ class Languages extends Translations {
           "edit_profile": "Edit Profile",
           "no_photos_found": "No photos found",
           "profile": "Profile",
-          "chat": "Sohbet",
+          "chat": "Chat",
           "chat_language_updated": "Chat language is updated",
           "something_went_wrong": "Something went wrong!",
           "click_here": "Click Here",

@@ -241,7 +241,7 @@ class _ProfileState extends State<Profile> {
                                 colors: [Colors.white, Colors.white]),
                             borderRadius: BorderRadius.circular(20)),
                         child: Container(
-                          width: 200,
+                          width: 350,
                           height: 40,
                           alignment: Alignment.center,
                           child: Text(
