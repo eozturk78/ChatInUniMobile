@@ -315,8 +315,6 @@ class Apis {
       );
     }
     while (true) {
-      Timer time = await Future.delayed(Duration(milliseconds: 500));
-
       final response = await http.get(
         uri,
         headers: {

@@ -505,7 +505,7 @@ class Languages extends Translations {
           "gold_member_requests": "Gold Member Requests",
           "parameters_saved_successfully": "Параметри успішно збережено",
           "gold_user_desc":
-              "Хочете отримувати повідомлення від більшої кількості людей? Напишіть свій номер телефону, і ми допоможемо вам і отримаємо більше повідомлень",
+              "Хочете отримувати повідомлення від більшої кількості людей? Вкажіть свій номер телефону і ми допоможемо вам отримувати більше повідомлень",
           "user_name": "Ім`я користувача",
           "u_forgot_password_message_template":
               "Шаблон користувача забув пароль",
@@ -570,7 +570,7 @@ class Languages extends Translations {
           "field_required": "Це поле є обов`язковим",
           "is_gold": "Gold Member",
           "skip_screen_sub_exp":
-              "Свобода розмовляйте з будь-якою людиною рідною мовою",
+              "Вільно спілкуйтесь з будь-якою людиною рідною мовою",
           "please_enter_correct_user_name":
               "Будь ласка, введіть правильне ім`я користувача",
           "upload_photo": "Завантажити фото",
