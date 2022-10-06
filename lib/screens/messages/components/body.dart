@@ -38,7 +38,6 @@ class _BodyState extends State<Body> {
     super.initState();
     print(socket.connected);
     socket.on('Message', (data) {
-      print('socket ${data.toString()}');
     });
     print(widget.data['ChatId']);
   }
@@ -71,7 +70,8 @@ class _BodyState extends State<Body> {
               : Apis().getGetChat(widget.username, widget.data['ChatId'],
                   token!, langCode == null ? lang : langCode),
           builder: (context, snapshot) {
-            if (snapshot.connectionState != ConnectionState.active) {
+            if (snapshot.connectionState != ConnectionState.done 
+                && snapshot.connectionState != ConnectionState.active) {
               return const Center(child: CircularProgressIndicator());
             } else if (!snapshot.hasData) {
               return Center(

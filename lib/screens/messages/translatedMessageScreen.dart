@@ -78,6 +78,7 @@ class _MessagesScreenState extends State<TranslatedMessagesScreen> {
             ChatInputField(
               username: widget.username,
               chatId: widget.data['ChatId'],
+              data: widget.data,
             ),
           ],
         ),

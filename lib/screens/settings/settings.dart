@@ -1,24 +1,19 @@
 import 'dart:convert';
 import 'package:chatinunii/screens/chats/chats_screen.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:http/http.dart' as http;
 import 'package:chatinunii/authScreens/login.dart';
-import 'package:chatinunii/components/bottomnavbar.dart';
 import 'package:chatinunii/constants.dart';
-import 'package:chatinunii/core/apis.dart';
 import 'package:chatinunii/screens/chats/chatThroughStatus.dart';
 import 'package:chatinunii/screens/profile.dart';
 import 'package:chatinunii/screens/settings/changepassword.dart';
 import 'package:chatinunii/screens/settings/makemegolduser.dart';
-import 'package:chatinunii/screens/settings/setlanguage.dart';
 import 'package:chatinunii/screens/splashscreen.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:translator/translator.dart';
+
+import 'deletemyaccount.dart';
 
 class Settings extends StatefulWidget {
   const Settings({Key? key}) : super(key: key);
@@ -84,6 +79,15 @@ class _SettingsState extends State<Settings> {
                       builder: (context) => const MakeMeGoldUser()));
                 },
                 child: buildButton(Icons.verified_user, 'make_gold_user'.tr)),
+            const Divider(
+              color: kPrimaryColor,
+            ),
+            InkWell(
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const DeleteMyAccount()));
+                },
+                child: buildButton(Icons.settings, 'delete_my_account'.tr)),
             const Divider(
               color: kPrimaryColor,
             ),

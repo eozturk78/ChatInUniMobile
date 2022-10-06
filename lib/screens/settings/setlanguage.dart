@@ -1,19 +1,14 @@
 // ignore_for_file: deprecated_member_use, file_names, prefer_const_constructors, unused_label, curly_braces_in_flow_control_structures
 import 'dart:convert';
-import 'dart:developer';
 
 import 'package:chatinunii/components/toast.dart';
 import 'package:chatinunii/constants.dart';
 import 'package:chatinunii/core/apis.dart';
-import 'package:chatinunii/models/statusmodel.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:translator/translator.dart';
 
-import '../../authScreens/login.dart';
-import '../splashscreen.dart';
 
 class SetLanguage extends StatefulWidget {
   const SetLanguage();
@@ -152,9 +147,7 @@ class _SetLanguageState extends State<SetLanguage> {
           }),
       automaticallyImplyLeading: false,
       backgroundColor: kPrimaryColor,
-      title: Text(
-        selectLng == null ? "" : "$selectLng",
-      ),
+      title: Text("chat_language".tr),
     );
   }
 }

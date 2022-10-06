@@ -4,11 +4,14 @@ import 'package:get/get.dart';
 
 import '../../../authScreens/login.dart';
 import '../../../constants.dart';
+import '../messages_screen.dart';
 
 class ChatInputField extends StatefulWidget {
   final username;
   var chatId;
-  ChatInputField({Key? key, required this.username, required this.chatId})
+  var data;
+
+  ChatInputField({Key? key, required this.username, required this.chatId, required this.data})
       : super(key: key);
 
   @override
@@ -69,7 +72,6 @@ class _ChatInputFieldState extends State<ChatInputField> {
                     ),
                     IconButton(
                       onPressed: () {
-                        print(msg.text.trim());
                         var p = {
                           'ChatId': widget
                               .chatId, // which is support from GetMessageList end point,
@@ -83,8 +85,24 @@ class _ChatInputFieldState extends State<ChatInputField> {
                           'IsFromLoggedUser': true //-- everytime true,
                         };
                         msg.text == '' ? null : socket.emit('Message', p);
-                        socket.on('Message', (data) => print(data));
+                        if(widget.data['Messages'] == null){
+                          widget.data['Messages'] = [];
+                          widget.data['Messages'].add(p);
+                          //Navigator.pop(context);  // pop current page
+                          Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) => MessagesScreen(
+                                            username: widget.username,
+                                            data: widget.data,
+                                            index: 1,
+                                          )));
+                        
+                          // push it back in
+                        }
+                          
                         setState(() {});
+                        socket.on('Message', (data) {
+                          print('son data');
+                        });
                       },
                       icon: Icon(
                         Icons.send,

@@ -10,11 +10,9 @@ import 'package:chatinunii/screens/splashscreen.dart';
 import 'package:chatinunii/screens/uploadphoto.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:translator/translator.dart';
 import '../authScreens/login.dart';
-import '../components/bottomnavbar.dart';
 import '../constants.dart';
 
 class Profile extends StatefulWidget {

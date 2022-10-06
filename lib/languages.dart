@@ -4,6 +4,9 @@ class Languages extends Translations {
   @override
   Map<String, Map<String, String>> get keys => {
         'en_US': {
+          "we_got_my_account_req":"We got your delete account request",
+          "delete_my_account_desc":"I want my account deleted with all details. Please delete all records",
+          "delete_my_account":"Delete my account",
           "empty_chat": "Empty Chat",
           "registration_is_completed":
               "Registration is completed please login and start to use app",
@@ -28,7 +31,7 @@ class Languages extends Translations {
           "email_or_user_name": "Email / User Name",
           "sent_an_email": "We've sent an email for change your password",
           "security": "Security",
-          "log_out": "Log Out",
+          "log_out": "Log out",
           "block_user": "Block User",
           "invalid_message_template_id": "Invalid Message Template",
           "invalid_message_account_name": "Invalid Message Account Name",
@@ -133,7 +136,7 @@ class Languages extends Translations {
           "u_forgot_password_message_template": "User Forgot Password Template",
           "user_type_desc": "User Type",
           "start_chating": "Start Chating!",
-          "logout": "Log Out",
+          "logout": "Log out",
           "complaint_user_id": "Complaint User Id",
           "add": "Add",
           "blogs": "Blogs",
@@ -157,7 +160,7 @@ class Languages extends Translations {
           "invalid_resource_id": "Invalid Resource",
           "user": "User",
           "complete_gold_member": "Complete Gold Member",
-          "change_password": "Change Password",
+          "change_password": "Change password",
           "gold_user_desc":
               "Want to receive messages from more people? Write your phone number and we`ll help you and get you more messages",
           "invalid_university_id": "Invalid University",
@@ -193,6 +196,9 @@ class Languages extends Translations {
           "select_photo": "Select Photo"
         },
         'tr_TR': {
+          "we_got_my_account_req":"Hesap silme isteğinizi aldık",
+          "delete_my_account_desc":"Hesabımı tüm detaylarıyla silinmesini istiyorum. Lutfen tüm kayıtlarını silin",
+          "delete_my_account":"Hesabımı sil",
           "empty_chat": "Konuşma yok",
           "registration_is_completed":
               "Kayıt tamamlandı lütfen giriş yapın ve uygulamayı kullanmaya başlayın",
@@ -217,7 +223,7 @@ class Languages extends Translations {
           "forgot_password": "Şifremi Unuttum",
           "email_or_user_name": "E-Posta / Kullanıcı Adı",
           "sent_an_email": "Şifrenizi değiştirmek için bir e-posta gönderdik",
-          "logout": "Oturumu Kapat",
+          "logout": "Oturumu kapat",
           "language_name": "Dil Adı",
           "please_enter_correct_user_name":
               "Lütfen kullanıcı adını kontrol edin",
@@ -290,7 +296,7 @@ class Languages extends Translations {
           "domain": "Alan Adı",
           "user_id": "User Id",
           "member": "Üye",
-          "change_password": "Şifre Değişikliği",
+          "change_password": "Şifre değişikliği",
           "short_name": "Kısa Adı",
           "invalid_sender": "Geçersiz Gönderici",
           "phone_number": "Telefon Numarası (ülke kodu ile birlikte)",
@@ -383,6 +389,9 @@ class Languages extends Translations {
           "select_photo": "Fotoğraf Seç"
         },
         'uk_UA': {
+          "we_got_my_account_req":"Ми отримали ваш запит на видалення облікового запису",
+          "delete_my_account_desc":"Я хочу видалити мій обліковий запис із усіма даними. Будь ласка, видаліть усі записи",
+          "delete_my_account":"Видалити мій запис",
           "empty_chat": "Порожній чат",
           "registration_is_completed":
               "Реєстрацію завершено, увійдіть і почніть користуватися програмою",
@@ -563,7 +572,7 @@ class Languages extends Translations {
           "skip": "Пропустити",
           "change_photo": "Змінити фотографію",
           "there_is_no_data": "Даних немає",
-          "change_password": "Змінити Пароль",
+          "change_password": "Змінити пароль",
           "block_user": "Заблокувати",
           "complainted_user_name": "Complainted User Name",
           "short_name": "Коротке ім`я",

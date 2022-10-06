@@ -248,6 +248,20 @@ class Apis {
     }
   }
 
+  Future deleteMyAccount() async {
+    String finalurl = '$baseurl/User/DeleteMyAccount';
+    var response = await http.post(Uri.parse(finalurl),
+        headers: {
+          'Content-Type': 'application/json',
+          'lang': lang!,
+          'Token': token!
+        });
+    if (response.statusCode == 200) {
+      return response.body;
+    }
+  }
+  
+
   Future blockByUser(
       {required String blockedUserNme, required String chatId}) async {
     String finalurl = '$baseurl/User/BlockUserByUser';
@@ -303,6 +317,7 @@ class Apis {
       String username, String chatId, String token, String? langCode) async* {
     String finalUrl = '$baseurl/User/GetMessageList';
     Uri uri = Uri.parse(finalUrl);
+    print('dasdasdada da dad ad as');
     if (transFlag == false && countscreen != 0) {
       String transUrl = '$baseurl/User/TranslateChat/$chatId';
       await http.post(
@@ -352,7 +367,6 @@ class Apis {
     int i = 0;
     while (true) {
       i++;
-      Timer time = await Future.delayed(Duration(milliseconds: 250));
 
       final response = await http.post(
         uri,
