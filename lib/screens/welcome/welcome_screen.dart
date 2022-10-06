@@ -38,34 +38,47 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
+      body: Container(
+        color: kPrimaryColor,
         child: Column(
           children: [
             const Spacer(
               flex: 2,
             ),
-            Image.asset("assets/images/welcome_image.png"),
+            Container(
+              padding: const EdgeInsets.all(5),
+              decoration: BoxDecoration(
+                  border: Border.all(color: Colors.white, width: 3),
+                  borderRadius: BorderRadius.circular(5)),
+              child: const Text(
+                'ChatInUni',
+                style: TextStyle(fontSize: 30, color: Colors.white),
+              ),
+            ),
             const Spacer(
-              flex: 3,
+              flex: 1,
+            ),
+            Image.asset(
+              "assets/images/welcome.png",
+              width: MediaQuery.of(context).size.width,
+              // fit: BoxFit.fill,
+            ),
+            const Spacer(
+              flex: 1,
             ),
             Text(
               "skip_screen_exp".tr,
               textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.headline5?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
+              style: Theme.of(context)
+                  .textTheme
+                  .headline5
+                  ?.copyWith(fontWeight: FontWeight.bold, color: Colors.white),
             ),
             const Spacer(),
             Text(
               "skip_screen_sub_exp".tr,
               textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Theme.of(context)
-                    .textTheme
-                    .bodyText1
-                    ?.color
-                    ?.withOpacity(0.64),
-              ),
+              style: TextStyle(color: Colors.white),
             ),
             const Spacer(
               flex: 3,
@@ -87,11 +100,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     Text(
                       "skip".tr,
                       style: Theme.of(context).textTheme.bodyText1?.copyWith(
-                            color: Theme.of(context)
-                                .textTheme
-                                .bodyText1
-                                ?.color
-                                ?.withOpacity(0.8),
+                            color: Colors.white,
                           ),
                     ),
                     const SizedBox(
@@ -100,11 +109,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     Icon(
                       Icons.arrow_forward_ios,
                       size: 16,
-                      color: Theme.of(context)
-                          .textTheme
-                          .bodyText1
-                          ?.color
-                          ?.withOpacity(0.8),
+                      color: Colors.white,
                     ),
                   ],
                 ),
