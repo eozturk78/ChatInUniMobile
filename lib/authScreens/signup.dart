@@ -110,9 +110,9 @@ class _SignupState extends State<Signup> {
     _mySelection = null;
   }
 
-  final Uri _urlEnglish = Uri.parse('https://chatinuni.com/en/pricacy-policy');
-  final Uri _urlTurkish = Uri.parse('https://chatinuni.com/tr/pricacy-policy');
-  final Uri _urlOther = Uri.parse('https://chatinuni.com/ua/pricacy-policy');
+  final Uri _urlEnglish = Uri.parse('https://chatinuni.com/en/privacy-policy');
+  final Uri _urlTurkish = Uri.parse('https://chatinuni.com/en/privacy-policy');
+  final Uri _urlOther = Uri.parse('https://chatinuni.com/en/privacy-policy');
 
   Future<void> _launchUrl() async {
     if (getlang == "en_US") {
