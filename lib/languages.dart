@@ -4,9 +4,10 @@ class Languages extends Translations {
   @override
   Map<String, Map<String, String>> get keys => {
         'en_US': {
-          "we_got_my_account_req":"We got your delete account request",
-          "delete_my_account_desc":"I want my account deleted with all details. Please delete all records",
-          "delete_my_account":"Delete my account",
+          "we_got_my_account_req": "We got your delete account request",
+          "delete_my_account_desc":
+              "I want my account deleted with all details. Please delete all records",
+          "delete_my_account": "Delete my account",
           "empty_chat": "Empty Chat",
           "registration_is_completed":
               "Registration is completed please login and start to use app",
@@ -64,7 +65,7 @@ class Languages extends Translations {
           "description": "Description",
           "send": "Send",
           "by_registring_accept_terms":
-              "By signing up for the app, you accept our membership agreement.",
+              "By signing up for the app, you accept our Privacy Policy and Terms and Conditions.",
           "please_enter_correct_user_name": "Please enter correct user name",
           "language_name": "Language Name",
           "invalid_use_ssl": "Invalid Use SSL",
@@ -196,9 +197,10 @@ class Languages extends Translations {
           "select_photo": "Select Photo"
         },
         'tr_TR': {
-          "we_got_my_account_req":"Hesap silme isteğinizi aldık",
-          "delete_my_account_desc":"Hesabımı tüm detaylarıyla silinmesini istiyorum. Lutfen tüm kayıtlarını silin",
-          "delete_my_account":"Hesabımı sil",
+          "we_got_my_account_req": "Hesap silme isteğinizi aldık",
+          "delete_my_account_desc":
+              "Hesabımı tüm detaylarıyla silinmesini istiyorum. Lutfen tüm kayıtlarını silin",
+          "delete_my_account": "Hesabımı sil",
           "empty_chat": "Konuşma yok",
           "registration_is_completed":
               "Kayıt tamamlandı lütfen giriş yapın ve uygulamayı kullanmaya başlayın",
@@ -389,9 +391,11 @@ class Languages extends Translations {
           "select_photo": "Fotoğraf Seç"
         },
         'uk_UA': {
-          "we_got_my_account_req":"Ми отримали ваш запит на видалення облікового запису",
-          "delete_my_account_desc":"Я хочу видалити мій обліковий запис із усіма даними. Будь ласка, видаліть усі записи",
-          "delete_my_account":"Видалити мій запис",
+          "we_got_my_account_req":
+              "Ми отримали ваш запит на видалення облікового запису",
+          "delete_my_account_desc":
+              "Я хочу видалити мій обліковий запис із усіма даними. Будь ласка, видаліть усі записи",
+          "delete_my_account": "Видалити мій запис",
           "empty_chat": "Порожній чат",
           "registration_is_completed":
               "Реєстрацію завершено, увійдіть і почніть користуватися програмою",

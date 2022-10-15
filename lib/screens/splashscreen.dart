@@ -72,17 +72,30 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromRGBO(82, 14, 125, 1),
-      body: Center(
-        child: Container(
-          padding: const EdgeInsets.all(5),
-          decoration: BoxDecoration(
-              border: Border.all(color: Colors.white, width: 3),
-              borderRadius: BorderRadius.circular(5)),
-          child: const Text(
-            'ChatInUni',
-            style: TextStyle(fontSize: 30, color: Colors.white),
+      body: Stack(
+        children: [
+          Container(
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    opacity: 0.05,
+                    image: AssetImage('assets/images/ko-01.png'),
+                    fit: BoxFit.cover)),
           ),
-        ),
+          Center(
+            child: Container(
+              padding: const EdgeInsets.all(5),
+              decoration: BoxDecoration(
+                  border: Border.all(color: Colors.white, width: 3),
+                  borderRadius: BorderRadius.circular(5)),
+              child: const Text(
+                'ChatInUni',
+                style: TextStyle(fontSize: 30, color: Colors.white),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

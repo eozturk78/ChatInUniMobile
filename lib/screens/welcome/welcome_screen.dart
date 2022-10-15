@@ -31,84 +31,101 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     super.initState();
     setPrefrences().then((_) {
       setState(() {});
-      prefs.setString("welcome", "done");
+      // prefs.setString("welcome", "done");
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Column(
+      body: Container(
+        color: kPrimaryColor,
+        child: Stack(
           children: [
-            const Spacer(
-              flex: 2,
+            Container(
+              height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      opacity: 0.04,
+                      image: AssetImage('assets/images/ko-01.png'),
+                      fit: BoxFit.cover)),
             ),
-            Image.asset("assets/images/welcome_image.png"),
-            const Spacer(
-              flex: 3,
-            ),
-            Text(
-              "skip_screen_exp".tr,
-              textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.headline5?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
-            ),
-            const Spacer(),
-            Text(
-              "skip_screen_sub_exp".tr,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Theme.of(context)
-                    .textTheme
-                    .bodyText1
-                    ?.color
-                    ?.withOpacity(0.64),
-              ),
-            ),
-            const Spacer(
-              flex: 3,
-            ),
-            FittedBox(
-              child: TextButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => ChatByStatus(
-                        flag: false,
-                      ),
-                    ),
-                  );
-                },
-                child: Row(
-                  children: [
-                    Text(
-                      "skip".tr,
-                      style: Theme.of(context).textTheme.bodyText1?.copyWith(
-                            color: Theme.of(context)
-                                .textTheme
-                                .bodyText1
-                                ?.color
-                                ?.withOpacity(0.8),
-                          ),
-                    ),
-                    const SizedBox(
-                      width: kDefaultPadding / 4,
-                    ),
-                    Icon(
-                      Icons.arrow_forward_ios,
-                      size: 16,
-                      color: Theme.of(context)
-                          .textTheme
-                          .bodyText1
-                          ?.color
-                          ?.withOpacity(0.8),
-                    ),
-                  ],
+            Column(
+              children: [
+                const Spacer(
+                  flex: 2,
                 ),
-              ),
+                Container(
+                  padding: const EdgeInsets.all(5),
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Colors.white, width: 3),
+                      borderRadius: BorderRadius.circular(5)),
+                  child: const Text(
+                    'ChatInUni',
+                    style: TextStyle(fontSize: 30, color: Colors.white),
+                  ),
+                ),
+                const Spacer(
+                  flex: 1,
+                ),
+                Image.asset(
+                  "assets/images/welcome.png",
+                  width: MediaQuery.of(context).size.width,
+                  // fit: BoxFit.fill,
+                ),
+                const Spacer(
+                  flex: 1,
+                ),
+                Text(
+                  "skip_screen_exp".tr,
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.headline5?.copyWith(
+                      fontWeight: FontWeight.bold, color: Colors.white),
+                ),
+                const Spacer(),
+                Text(
+                  "skip_screen_sub_exp".tr,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(color: Colors.white),
+                ),
+                const Spacer(
+                  flex: 3,
+                ),
+                FittedBox(
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ChatByStatus(
+                            flag: false,
+                          ),
+                        ),
+                      );
+                    },
+                    child: Row(
+                      children: [
+                        Text(
+                          "skip".tr,
+                          style:
+                              Theme.of(context).textTheme.bodyText1?.copyWith(
+                                    color: Colors.white,
+                                  ),
+                        ),
+                        const SizedBox(
+                          width: kDefaultPadding / 4,
+                        ),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          size: 16,
+                          color: Colors.white,
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
